@@ -1,0 +1,20 @@
+<html>
+   <form action="/calculate" method="POST">
+      {% for item in range(n) %}
+
+      Enter item name<input type="text" name="item_name_{{item}}" value="{{ form_data.get('item_name_' ~ item, '') }}"></input>
+      Enter price of item<input type="number" name="item_price_{{item}}" value="{{ form_data.get('item_price_' ~ item, '') }}"></input>
+        
+      <br> 
+      {% endfor %}
+     <br>
+     <input type="submit" value="Calculate"></input>
+   </form>
+
+   {%if total %}
+    
+   {{total}}
+
+   {%endif%}
+
+</html>

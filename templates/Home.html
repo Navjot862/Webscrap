@@ -1,0 +1,12 @@
+<html>
+
+
+<img src="{{ url_for('static', filename='images/check.jpeg') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Home.css') }}">
+
+<body>
+<form  action="/number_items" method="POST" >
+ Enter total no of products <input type ='Text' name="Number"> </input>
+</form>
+</body>
+</html>
